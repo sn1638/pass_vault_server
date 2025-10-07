@@ -15,6 +15,9 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/vault", vaultRoutes);
 
+app.get("/",()=>{
+  res.send("hello world")
+})
 const PORT = process.env.PORT || 5000;
 
 mongoose
